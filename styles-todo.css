@@ -1,0 +1,241 @@
+:root {
+    --blue: #2C8CDF;
+    --grey: #7B8088;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    border-radius: 5px;
+    background-color: white;
+    width: 600px;
+    min-height: 800px;
+    padding: 35px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 800;
+
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+
+.input-container {
+    background-color: #F5F6F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 85%;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+#button-plus {
+    height: 70px;
+    width: 70px;
+    background-color: var(--blue);
+    background-image: url(../assets/plus-button.png);
+    background-size: 33px 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.input-task {
+    width: 60%;
+    height: 50px;
+    outline: none;
+    border: 0px solid;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+.input-task::-webkit-input-placeholder {
+    font-size: 18px;
+
+}
+
+.input-date {
+    position: relative;
+    width: 40%;
+    height: 50px;
+    outline: none;
+    border: 0px solid;
+    border-radius: 2px;
+    padding: 10px;
+
+}
+
+.input-date::-webkit-datetime-edit-fields-wrapper {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--grey);
+}
+
+.input-date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    background: url(../assets/calendar.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+
+.main-box-title {
+    margin: 25px 0;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.menu-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+
+.menu-item-text {
+    font-size: large;
+    color: #727D81;
+}
+
+.menu-button {
+    color: #2C8CDF;
+    font-size: large;
+    border: 0px solid;
+}
+
+.menu-item {
+    color: #7B8088;
+    font-weight: 700;
+}
+
+.menu-item-button {
+    color: var(--blue);
+}
+
+#list-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    height: 80px;
+    background-color: #F5F6F7;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.list-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-content {
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.item-date {
+    color: #656A72;
+    font-weight: 500;
+}
+
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    position: relative;
+    width: 28px;
+    height: 28px;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #2C8CDF;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container .checkmark:after {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    left: 0;
+    filter: brightness(0) invert(1);
+    background: url(../assets/tick.png);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #eee;
+}
+
+.checkbox-container.checkbox:checked + .list-item-text > * {
+    text-decoration: line-through;
+}
+
+input:checked .list-item {
+    background-color: #2C8CDF;
+}

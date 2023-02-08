@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="stylesheet" href="/styles-todo.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="title">Schedule</div>
+        <div class="wrapper">
+          <div class="input-container">
+            <input
+              id="todo-input-task"
+              class="input-task"
+              type="text"
+              placeholder="Add a new task"
+            />
+            <input
+              id="todo-input-hour"
+              class="input-date"
+              type="time"
+              placeholder="Date"
+            />
+          </div>
+          <div id="button-plus" class="button_plus"></div>
+        </div>
+        <div class="main-box-title">Daily Tasks</div>
+        <div class="menu-box">
+          <div class="menu-item">Today</div>
+          <div id="clear-all" class="menu-item menu-item-button">Clear All</div>
+        </div>
+        <div id="list-container"></div>
+      </div>
+    </div>
+    <script src="app-todo.js"></script>
+  </body>
+</html>
